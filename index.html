@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)file:///C:/Users/ashvi/Downloads/index_1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashvin Gaonkar — Software Engineer</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --bg-alt: #161922;
+    --text: #e7e9ee;
+    --text-dim: #9aa0ab;
+    --accent: #5b8def;
+    --border: #262a34;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header {
+    padding: 80px 0 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  header p.role {
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-top: 6px;
+    font-weight: 500;
+  }
+
+  .contact-links {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 0.95rem;
+  }
+
+  .contact-links a, .contact-links span {
+    color: var(--text-dim);
+    text-decoration: none;
+  }
+
+  .contact-links a:hover {
+    color: var(--accent);
+  }
+
+  section {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  section:last-child {
+    border-bottom: none;
+  }
+
+  h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+
+  .entry {
+    margin-bottom: 28px;
+  }
+
+  .entry:last-child {
+    margin-bottom: 0;
+  }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+
+  .entry-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+
+  .entry-subtitle {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+
+  .entry-date {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  ul.bullets {
+    list-style: none;
+    margin-top: 10px;
+  }
+
+  ul.bullets li {
+    position: relative;
+    padding-left: 18px;
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  ul.bullets li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .skills-grid dt {
+    color: var(--text-dim);
+    font-weight: 500;
+  }
+
+  .skills-grid dd {
+    color: var(--text);
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0 10px;
+  }
+
+  .project-tags span {
+    font-size: 0.75rem;
+    color: var(--accent);
+    border: 1px solid var(--border);
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+
+  footer {
+    padding: 40px 0 80px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 56px 0 36px; }
+    header h1 { font-size: 1.7rem; }
+    .skills-grid { grid-template-columns: 1fr; gap: 4px 0; }
+    .skills-grid dt { margin-top: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Ashvin Gaonkar</h1>
+    <p class="role">Software Engineer</p>
+    <div class="contact-links">
+      <span>Seattle, WA</span>
+      <a href="mailto:ashvingaonkar@gmail.com">ashvingaonkar@gmail.com</a>
+      <a href="tel:+19842867889">+1 (984) 286-7889</a>
+      <a href="https://linkedin.com/in/ashvin-gaonkar" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Ashvin-G" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Software Engineer, Juniper Networks Inc. (Acquired by HPE)</span>
+        <span class="entry-date">Nov 2024 – Present</span>
+      </div>
+      <ul class="bullets">
+        <li>Maintain and support multiple ASIC simulation environments used for the development and validation of networking silicon for high-performance switches and routers.</li>
+        <li>Design, develop, and maintain verification testbenches using C++ and SystemC to validate functional correctness of individual chip components and full-chip behavior.</li>
+        <li>Develop and maintain Python automation scripts to streamline simulation workflows, manage infrastructure, and improve integration between design verification teams and simulator platforms.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Researcher, Department of Nuclear Engineering, NC State</span>
+        <span class="entry-date">Jun 2024 – Nov 2024</span>
+      </div>
+      <ul class="bullets">
+        <li>Revamped the frontend of the open source project OpenPRA, crafting React components with Elastic UI and ensuring responsive design and optimal performance across devices.</li>
+        <li>Developed a Global Data Store to centralize and manage data across the project, enhancing scalability and ensuring data integrity, with end-to-end and component testing using Cypress.</li>
+        <li>Utilized Swagger to document APIs, enhancing clarity and communication between teams.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Graduate Software Engineer, Siemens</span>
+        <span class="entry-date">Jul 2021 – Jun 2022</span>
+      </div>
+      <ul class="bullets">
+        <li>Led a zero-downtime Kong upgrade on a production-level system, using new features like the disable_penalty flag to prevent exponential retry-after timeouts, resulting in a 20% performance boost.</li>
+        <li>Developed Java RESTful APIs interacting with AWS components, serving business logic for core operations, and implemented Jenkins pipelines that increased deployment efficiency by 30%.</li>
+        <li>Built and refined custom Kong plugins, bolstering API capabilities and optimizing system performance.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Academic Projects</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Bookipedia: E-commerce for Books</span>
+      </div>
+      <div class="project-tags">
+        <span>Node.js</span><span>React</span><span>MongoDB</span><span>Kafka</span><span>Ansible</span><span>Docker</span><span>Grafana</span>
+      </div>
+      <ul class="bullets">
+        <li>Led full-stack development and established end-to-end CI/CD pipelines, reducing deployment time from 35 to 10 minutes and doubling testing and development speed.</li>
+        <li>Utilized Kafka for event-driven architecture, enabling real-time inventory tracking and user activity logging.</li>
+        <li>Devised a one-click setup for deploying monitoring infrastructure using Ansible and GitHub Actions, cutting setup time by 70%.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">CollabCode: Live Code Editing Platform</span>
+      </div>
+      <div class="project-tags">
+        <span>React</span><span>Node.js</span><span>Websockets</span><span>Docker</span>
+      </div>
+      <ul class="bullets">
+        <li>Developed a real-time collaborative coding platform with live editing, authentication, live chat, and role-based access control, containerized with Docker.</li>
+        <li>Used MongoDB for efficient data storage and retrieval, and added in-editor code commenting features.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <dl class="skills-grid">
+      <dt>Languages</dt>
+      <dd>Python, C++, Java, JavaScript, HTML, CSS, SQL, NoSQL, Node.js, React</dd>
+
+      <dt>Skillset</dt>
+      <dd>API Development, CI/CD, Web Development, Data Analysis, Data Visualization, Testing</dd>
+
+      <dt>Infrastructure</dt>
+      <dd>AWS, Azure, Docker, Kubernetes, Git, Jenkins, Grafana, Prometheus</dd>
+
+      <dt>Frameworks &amp; Tools</dt>
+      <dd>Spring, Kafka, Flask, Django, Cypress, JUnit, PyTest, Cucumber, Postman</dd>
+    </dl>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">North Carolina State University</span>
+        <span class="entry-date">Aug 2022 – May 2024</span>
+      </div>
+      <div class="entry-subtitle">Master of Computer Science — GPA 3.8 / 4.0</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">KLS Gogte Institute of Technology, Belgaum, India</span>
+        <span class="entry-date">Aug 2017 – Jul 2021</span>
+      </div>
+      <div class="entry-subtitle">Bachelor of Engineering, Computer Science — Top 10%, GPA 9.43 / 10.0</div>
+    </div>
+  </section>
+
+  <footer>
+    Ashvin Gaonkar · Seattle, WA
+  </footer>
+
+</div>
+
+
+
+</body></html>
