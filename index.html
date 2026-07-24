@@ -1,191 +1,22 @@
 <!DOCTYPE html>
-<!-- saved from url=(0045)file:///C:/Users/ashvi/Downloads/index_1.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ashvin Gaonkar — Software Engineer</title>
-<style>
-  :root {
-    --bg: #0f1115;
-    --bg-alt: #161922;
-    --text: #e7e9ee;
-    --text-dim: #9aa0ab;
-    --accent: #5b8def;
-    --border: #262a34;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-  }
-
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  header {
-    padding: 80px 0 48px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  header h1 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-  }
-
-  header p.role {
-    color: var(--accent);
-    font-size: 1.1rem;
-    margin-top: 6px;
-    font-weight: 500;
-  }
-
-  .contact-links {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    font-size: 0.95rem;
-  }
-
-  .contact-links a, .contact-links span {
-    color: var(--text-dim);
-    text-decoration: none;
-  }
-
-  .contact-links a:hover {
-    color: var(--accent);
-  }
-
-  section {
-    padding: 40px 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  section:last-child {
-    border-bottom: none;
-  }
-
-  h2 {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--accent);
-    margin-bottom: 24px;
-    font-weight: 600;
-  }
-
-  .entry {
-    margin-bottom: 28px;
-  }
-
-  .entry:last-child {
-    margin-bottom: 0;
-  }
-
-  .entry-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-bottom: 4px;
-  }
-
-  .entry-title {
-    font-weight: 600;
-    font-size: 1.05rem;
-  }
-
-  .entry-subtitle {
-    color: var(--text-dim);
-    font-size: 0.95rem;
-  }
-
-  .entry-date {
-    color: var(--text-dim);
-    font-size: 0.85rem;
-    white-space: nowrap;
-  }
-
-  ul.bullets {
-    list-style: none;
-    margin-top: 10px;
-  }
-
-  ul.bullets li {
-    position: relative;
-    padding-left: 18px;
-    color: var(--text-dim);
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-  }
-
-  ul.bullets li::before {
-    content: "–";
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-  }
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 12px 20px;
-    font-size: 0.95rem;
-  }
-
-  .skills-grid dt {
-    color: var(--text-dim);
-    font-weight: 500;
-  }
-
-  .skills-grid dd {
-    color: var(--text);
-  }
-
-  .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin: 8px 0 10px;
-  }
-
-  .project-tags span {
-    font-size: 0.75rem;
-    color: var(--accent);
-    border: 1px solid var(--border);
-    padding: 2px 8px;
-    border-radius: 4px;
-  }
-
-  footer {
-    padding: 40px 0 80px;
-    text-align: center;
-    color: var(--text-dim);
-    font-size: 0.85rem;
-  }
-
-  @media (max-width: 600px) {
-    header { padding: 56px 0 36px; }
-    header h1 { font-size: 1.7rem; }
-    .skills-grid { grid-template-columns: 1fr; gap: 4px 0; }
-    .skills-grid dt { margin-top: 10px; }
-  }
-</style>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.min.css">
 </head>
 <body>
 
-<div class="container">
+<button class="devmode-toggle" id="devmode-btn" type="button">
+  <span class="dot"></span> Dev Mode
+</button>
 
-  <header>
+<div class="page">
+
+  <aside class="sidebar">
+    <img class="avatar" src="assets/ashvin.jpg" alt="Ashvin Gaonkar">
     <h1>Ashvin Gaonkar</h1>
     <p class="role">Software Engineer</p>
     <div class="contact-links">
@@ -195,28 +26,33 @@
       <a href="https://linkedin.com/in/ashvin-gaonkar" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://github.com/Ashvin-G" target="_blank" rel="noopener">GitHub</a>
     </div>
-  </header>
+  </aside>
+
+  <main class="content">
 
   <section id="experience">
     <h2>Experience</h2>
 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">Software Engineer, Juniper Networks Inc. (Acquired by HPE)</span>
+        <span class="entry-title">Software Engineer</span>
         <span class="entry-date">November 2024 – Present</span>
       </div>
+      <div class="entry-subtitle">Juniper Networks Inc. (Acquired by HPE) · Sunnyvale, USA</div>
       <ul class="bullets">
         <li>Maintain and support multiple ASIC simulation environments used for the development and validation of networking silicon for high-performance switches and routers.</li>
-        <li>Design, develop, and maintain verification testbenches using C++ and SystemC to validate functional correctness of individual chip components and full-chip behavior.</li>
+        <li>Developed C++ testbenches around SystemC-based behavioral models, achieving a 17× simulation speedup compared to the previous testbench implementation for high-performance networking ASIC validation.</li>
         <li>Develop and maintain Python automation scripts to streamline simulation workflows, manage infrastructure, and improve integration between design verification teams and simulator platforms.</li>
+        <li>Diagnosed and resolved memory leaks exceeding 100 MB across 25,000+ heap allocations, improving simulator stability and memory efficiency using Valgrind.</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">Researcher, Department of Nuclear Engineering, NC State</span>
+        <span class="entry-title">Researcher</span>
         <span class="entry-date">June 2024 – November 2024</span>
       </div>
+      <div class="entry-subtitle">Department of Nuclear Engineering, NC State · Raleigh, USA</div>
       <ul class="bullets">
         <li>Revamped the frontend of the open source project OpenPRA, crafting React components with Elastic UI and ensuring responsive design and optimal performance across devices.</li>
         <li>Developed a Global Data Store to centralize and manage data across the project, enhancing scalability and ensuring data integrity, with end-to-end and component testing using Cypress.</li>
@@ -226,19 +62,46 @@
 
     <div class="entry">
       <div class="entry-header">
-        <span class="entry-title">Graduate Software Engineer, Siemens</span>
+        <span class="entry-title">Graduate Software Engineer</span>
         <span class="entry-date">July 2021 – June 2022</span>
       </div>
+      <div class="entry-subtitle">Siemens · Pune, India</div>
       <ul class="bullets">
         <li>Led a zero-downtime Kong upgrade on a production-level system, using new features like the disable_penalty flag to prevent exponential retry-after timeouts, resulting in a 20% performance boost.</li>
         <li>Developed Java RESTful APIs interacting with AWS components, serving business logic for core operations, and implemented Jenkins pipelines that increased deployment efficiency by 30%.</li>
         <li>Built and refined custom Kong plugins, bolstering API capabilities and optimizing system performance.</li>
       </ul>
     </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Software Engineer Intern</span>
+        <span class="entry-date">March 2019 – May 2019</span>
+      </div>
+      <div class="entry-subtitle">New Age Incubation Center, KLS Gogte Institute of Technology · Belagavi, India</div>
+      <ul class="bullets">
+        <li>Designed and developed a robust IoT application to establish secure communication, employing a defense-in-depth strategy that leveraged multiple layers of encryption, including protocols such as RSA.</li>
+        <li>Implemented validation techniques within the system's framework to verify data accuracy and integrity once it was decrypted, ensuring reliable and secure communication.</li>
+      </ul>
+    </div>
   </section>
 
   <section id="projects">
-    <h2>Academic Projects</h2>
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">SwitchSim: Network Switch Simulator</span>
+      </div>
+      <div class="project-tags">
+        <span>Python</span><span>FastAPI</span><span>React</span><span>xterm.js</span><span>@xyflow/react</span>
+      </div>
+      <ul class="bullets">
+        <li>Simulates L2 switching behavior — MAC learning, flooding, forwarding, and STP loop protection — through a terminal-driven CLI built with xterm.js.</li>
+        <li>Campaign mode offers guided levels against a single switch; Playground mode is a drag-and-drop canvas for wiring up custom multi-switch, multi-host topologies.</li>
+        <li>FastAPI backend models the domain (Switch, Port, Host, MacTable, EthernetFrame) and topology-wide algorithms like STP, with full request/response logging.</li>
+      </ul>
+    </div>
 
     <div class="entry">
       <div class="entry-header">
@@ -266,13 +129,15 @@
         <li>Used MongoDB for efficient data storage and retrieval, and added in-editor code commenting features.</li>
       </ul>
     </div>
+
+    <a class="more-projects-btn" href="pages/more-projects.html">More Projects</a>
   </section>
 
   <section id="skills">
     <h2>Technical Skills</h2>
     <dl class="skills-grid">
       <dt>Languages</dt>
-      <dd>Python, C++, Java, JavaScript, HTML, CSS, SQL, NoSQL, Node.js, React</dd>
+      <dd>Python, C++, SystemC, Java, JavaScript, HTML, CSS, SQL, NoSQL, Node.js, React</dd>
 
       <dt>Skillset</dt>
       <dd>API Development, CI/CD, Web Development, Data Analysis, Data Visualization, Testing</dd>
@@ -294,6 +159,10 @@
         <span class="entry-date">August 2022 – May 2024</span>
       </div>
       <div class="entry-subtitle">Master of Computer Science — GPA 3.8 / 4.0</div>
+      <div class="coursework">
+        <span class="coursework-label">Relevant Coursework</span>
+        Design and Analysis of Algorithms, Internet Protocols, Computer Network and Security, Software Engineering, Automated Software Engineering, Database Management Systems, DevOps, Privacy, Cloud Computing, Neural Networks
+      </div>
     </div>
 
     <div class="entry">
@@ -305,11 +174,21 @@
     </div>
   </section>
 
-  <footer>
-    Ashvin Gaonkar · Sunnyvale, CA
-  </footer>
+  </main>
 
 </div>
+
+<div id="terminal-overlay">
+  <div class="terminal-bar">
+    <span class="title">Portfolio Terminal</span>
+    <button class="exit-btn" id="terminal-exit" type="button">exit [esc]</button>
+  </div>
+  <div id="terminal-container"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/xterm@5.3.0/lib/xterm.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.8.0/lib/xterm-addon-fit.min.js"></script>
+<script src="js/terminal.js"></script>
 
 </body>
 </html>
