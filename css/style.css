@@ -234,12 +234,19 @@ footer {
   .content {
     padding-top: 0;
   }
+  .contact-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 14px;
+    row-gap: 6px;
+  }
 }
 
 @media (max-width: 600px) {
   .sidebar h1 { font-size: 1.7rem; }
   .avatar { width: 120px; height: 120px; }
-  .contact-links { align-items: center; }
   .skills-grid { grid-template-columns: 1fr; gap: 4px 0; }
   .skills-grid dt { margin-top: 10px; }
   .devmode-toggle { top: 12px; right: 12px; padding: 5px 10px; font-size: 0.75rem; }
