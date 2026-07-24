@@ -143,6 +143,20 @@ h2 {
   white-space: nowrap;
 }
 
+.entry-subtitle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.entry-location {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
 ul.bullets {
   list-style: none;
   margin-top: 10px;
