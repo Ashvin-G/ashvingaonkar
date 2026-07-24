@@ -7,6 +7,10 @@ var TerminalCommands = (function () {
   var MAN_PAGES = TerminalData.MAN_PAGES;
   var PROMPT = 'ashvin@portfolio:~$ ';
 
+  var PROJECT_URLS = {
+    switchsim: 'https://switchsim.ashvingaonkar.com/'
+  };
+
   var COMMANDS = {
     help: function () {
       return [
@@ -130,7 +134,18 @@ var TerminalCommands = (function () {
       }
       return ['', BOLD + role.title + RESET, DIM + role.date + RESET].concat(role.brief).concat(['']);
     },
-    projects: function () {
+    projects: function (args) {
+      args = args || [];
+      if (args[0] && args[1] && args[1].toLowerCase() === '--open') {
+        var name = args[0].toLowerCase();
+        var url = PROJECT_URLS[name];
+        if (!url) {
+          return ['', 'Unknown project: ' + name + ' (try: switchsim)', ''];
+        }
+        window.open(url, '_blank', 'noopener');
+        return ['', 'Opening ' + url + ' ...', ''];
+      }
+
       return [
         '',
         BOLD + 'SwitchSim: Network Switch Simulator' + RESET,

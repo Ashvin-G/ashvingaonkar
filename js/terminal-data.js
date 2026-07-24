@@ -236,8 +236,16 @@ var TerminalData = (function () {
       ]
     },
     projects: {
-      synopsis: 'projects',
-      description: 'Lists notable projects with tech stack and a short summary of each.'
+      synopsis: 'projects [<name> --open]',
+      description: 'Lists notable projects with tech stack and a short summary of each. Pass a project name with --open to open its live demo in a new tab.',
+      options: [
+        '<name>     one of: switchsim',
+        '--open     open the live demo for <name> or GitHub project source code'
+      ],
+      examples: [
+        'projects',
+        'projects switchsim --open'
+      ]
     },
     education: {
       synopsis: 'education',
