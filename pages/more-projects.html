@@ -32,6 +32,7 @@
     <div class="entry">
       <div class="entry-header">
         <span class="entry-title">Auctioneer: Multithreaded Auction &amp; Reliable File Transfer</span>
+        <span class="entry-affiliation">North Carolina State University</span>
       </div>
       <div class="project-tags">
         <span>Python</span><span>Sockets</span><span>TCP</span><span>UDP</span><span>Multithreading</span>
@@ -46,7 +47,53 @@
 
     <div class="entry">
       <div class="entry-header">
+        <span class="entry-title">Secure File Transfer & MITM Attacks</span>
+        <span class="entry-affiliation">North Carolina State University</span>
+      </div>
+      <div class="project-tags">
+        <span>Python</span><span>PyCryptodome</span><span>Sockets</span><span>AES-GCM</span><span>Diffie-Hellman</span>
+      </div>
+      <ul class="bullets">
+        <li>Built an encrypted file transfer system over raw sockets using AES-256-GCM with PBKDF2-derived keys, ensuring confidentiality and integrity of transferred data.</li>
+        <li>Implemented Diffie-Hellman key exchange to dynamically establish session keys, replacing static command-line key input.</li>
+        <li>Designed a man-in-the-middle proxy that performs separate DH exchanges with client and server to transparently decrypt and re-encrypt intercepted traffic, demonstrating on-path attack techniques.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Network Security Audit: NC State Infrastructure Recon</span>
+        <span class="entry-affiliation">North Carolina State University</span>
+      </div>
+      <div class="project-tags">
+        <span>Python</span><span>Censys</span><span>Shodan</span><span>Plotly</span><span>Certificate Transparency</span>
+      </div>
+      <ul class="bullets">
+        <li>Conducted a passive network security audit of NC State's infrastructure, identifying owned IPv4 CIDR blocks via ASN and WHOIS research without performing active scans.</li>
+        <li>Queried the Censys and Shodan APIs to catalog hosts across identified networks and built visualizations profiling operating systems, web servers, and exposed protocols.</li>
+        <li>Documented a discovered security finding with vulnerability context, impact analysis, and remediation recommendations, and identified external "shadow IT" hosts using DNS and certificate transparency data.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Face Recognition Based Attendance System</span>
+        <span class="entry-affiliation">KLS Gogte Institute of Technology</span>
+      </div>
+      <div class="project-tags">
+        <span>Python</span><span>OpenCV</span><span>Haar Cascade</span><span>Numpy</span>
+      </div>
+      <ul class="bullets">
+        <li>Built an end-to-end facial recognition pipeline for automated attendance: capturing and grayscaling face samples via webcam, training them into a recognition model, and matching live faces to enrolled identities.</li>
+        <li>Designed a three-stage workflow (dataset capture, model training, live detection) that logs each recognized user's ID with a timestamp to a running attendance record, removing the need for manual sign-in.</li>
+      </ul>
+      <a href="https://github.com/Ashvin-G/Face-Recognition-Based-Attendance-System" target="_blank" rel="noopener" class="more-projects-btn" style="margin-top: 10px; padding: 6px 14px; font-size: 0.85rem;">View on GitHub</a>
+    </div>
+    
+    <div class="entry">
+      <div class="entry-header">
         <span class="entry-title">Virtual Mouse: Hand Gesture Mouse Control</span>
+        <span class="entry-affiliation">Personal Project</span>
       </div>
       <div class="project-tags">
         <span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>Numpy</span><span>Pynput</span>
@@ -62,6 +109,7 @@
     <div class="entry">
       <div class="entry-header">
         <span class="entry-title">Sudoku Solver: CNN-Based Image Recognition &amp; Backtracking</span>
+        <span class="entry-affiliation">Personal Project</span>
       </div>
       <div class="project-tags">
         <span>Python</span><span>OpenCV</span><span>TensorFlow</span><span>Numpy</span><span>Matplotlib</span>
@@ -77,6 +125,7 @@
     <div class="entry">
       <div class="entry-header">
         <span class="entry-title">Blinker: Eye-Blink to Morse Code Communication</span>
+        <span class="entry-affiliation">Personal Project</span>
       </div>
       <div class="project-tags">
         <span>Python</span><span>OpenCV</span><span>dlib</span><span>Numpy</span>
@@ -87,21 +136,6 @@
       </ul>
       <a href="https://github.com/Ashvin-G/Blinker" target="_blank" rel="noopener" class="more-projects-btn" style="margin-top: 10px; padding: 6px 14px; font-size: 0.85rem;">View on GitHub</a>
     </div>
-
-    <div class="entry">
-      <div class="entry-header">
-        <span class="entry-title">Face Recognition Based Attendance System</span>
-      </div>
-      <div class="project-tags">
-        <span>Python</span><span>OpenCV</span><span>Haar Cascade</span><span>Numpy</span>
-      </div>
-      <ul class="bullets">
-        <li>Built an end-to-end facial recognition pipeline for automated attendance: capturing and grayscaling face samples via webcam, training them into a recognition model, and matching live faces to enrolled identities.</li>
-        <li>Designed a three-stage workflow (dataset capture, model training, live detection) that logs each recognized user's ID with a timestamp to a running attendance record, removing the need for manual sign-in.</li>
-      </ul>
-      <a href="https://github.com/Ashvin-G/Face-Recognition-Based-Attendance-System" target="_blank" rel="noopener" class="more-projects-btn" style="margin-top: 10px; padding: 6px 14px; font-size: 0.85rem;">View on GitHub</a>
-    </div>
-
   </section>
 
   </main>

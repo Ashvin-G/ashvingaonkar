@@ -5,11 +5,9 @@ var TerminalCommands = (function () {
   var EXPERIENCE = TerminalData.EXPERIENCE;
   var ALIAS_TO_KEY = TerminalData.ALIAS_TO_KEY;
   var MAN_PAGES = TerminalData.MAN_PAGES;
+  var PROJECT_URLS = TerminalData.PROJECT_URLS;
+  var PROJECTS = TerminalData.PROJECTS;
   var PROMPT = 'ashvin@portfolio:~$ ';
-
-  var PROJECT_URLS = {
-    switchsim: 'https://switchsim.ashvingaonkar.com/'
-  };
 
   var COMMANDS = {
     help: function () {
@@ -140,42 +138,31 @@ var TerminalCommands = (function () {
         var name = args[0].toLowerCase();
         var url = PROJECT_URLS[name];
         if (!url) {
-          return ['', 'Unknown project: ' + name + ' (try: switchsim)', ''];
+          return ['', 'Unknown project: ' + name + ' (try: switchsim, auctioneer, virtualmouse, sudokusolver, blinker, fras)', ''];
         }
         window.open(url, '_blank', 'noopener');
         return ['', 'Opening ' + url + ' ...', ''];
       }
 
-      return [
-        '',
-        BOLD + 'SwitchSim: Network Switch Simulator' + RESET,
-        DIM + 'Python, FastAPI, React, xterm.js, @xyflow/react' + RESET,
-        '  - Simulates L2 switching: MAC learning, flooding, forwarding, STP loop protection',
-        '  - Campaign mode (guided levels) and Playground mode (drag-and-drop multi-switch topologies)',
-        '  - Terminal-driven CLI via xterm.js, backed by a FastAPI domain model',
-        '',
-        BOLD + 'Bookipedia: E-commerce for Books' + RESET,
-        DIM + 'Node.js, React, MongoDB, Kafka, Ansible, Docker, Grafana' + RESET,
-        '  - Full-stack dev with CI/CD cutting deploy time from 35 to 10 minutes',
-        '  - Kafka-driven real-time inventory tracking and activity logging',
-        '',
-        BOLD + 'CollabCode: Live Code Editing Platform' + RESET,
-        DIM + 'React, Node.js, Websockets, Docker' + RESET,
-        '  - Real-time collaborative editor with auth, chat, and RBAC',
-        '  - MongoDB storage, in-editor commenting',
-        ''
-      ];
+      var lines = [''];
+      PROJECTS.forEach(function (project) {
+        lines.push(BOLD + project.title + RESET);
+        lines.push(DIM + project.stack + RESET);
+        project.points.forEach(function (point) { lines.push('  - ' + point); });
+        lines.push('');
+      });
+      return lines;
     },
     education: function () {
       return [
         '',
-        BOLD + 'North Carolina State University' + RESET,
-        DIM + 'Aug 2022 - May 2024' + RESET,
+        BOLD + 'North Carolina State University, Raleigh, NC' + RESET,
+        DIM + 'August 2022 - May 2024' + RESET,
         '  Master of Computer Science - GPA 3.8 / 4.0',
         '',
-        BOLD + 'KLS Gogte Institute of Technology, Belgaum, India' + RESET,
-        DIM + 'Aug 2017 - Jul 2021' + RESET,
-        '  Bachelor of Engineering, Computer Science - Top 10%, GPA 9.43 / 10.0',
+        BOLD + 'KLS Gogte Institute of Technology, Belagavi, India' + RESET,
+        DIM + 'August 2017 - July 2021' + RESET,
+        '  Bachelor of Engineering, Computer Science - GPA 9.43 / 10.0',
         ''
       ];
     },
