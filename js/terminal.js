@@ -1,8 +1,5 @@
 (function () {
-  var devParam = new URLSearchParams(location.search).get('dev');
-  if (devParam === 'true') localStorage.setItem('devMode', 'true');
-  if (devParam === 'false') localStorage.removeItem('devMode');
-  var DEV_MODE_ENABLED = localStorage.getItem('devMode') === 'true';
+  var DEV_MODE_ENABLED = true;
 
   var PROMPT = TerminalCommands.PROMPT;
   var ESC_SEQ = String.fromCharCode(27);
