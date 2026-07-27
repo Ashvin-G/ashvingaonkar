@@ -144,8 +144,12 @@
     document.getElementById('devmode-btn').addEventListener('click', openTerminal);
     document.getElementById('terminal-exit').addEventListener('click', closeTerminal);
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && document.getElementById('terminal-overlay').classList.contains('active')) {
+      var overlay = document.getElementById('terminal-overlay');
+      if (e.key === 'Escape' && overlay.classList.contains('active')) {
         closeTerminal();
+      } else if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k' && !overlay.classList.contains('active')) {
+        e.preventDefault();
+        openTerminal();
       }
     });
   } else {

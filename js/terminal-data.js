@@ -56,13 +56,21 @@ var TerminalData = (function () {
         '',
         BOLD + 'Major Contributions' + RESET,
         '✓ Built distributed regression infrastructure using Python, SQLite, and mpirun to execute regressions across multiple machines, significantly reducing turnaround time.',
+        '',
         '✓ Developed custom AI agents to assist with debugging, log analysis, and root-cause investigation, accelerating issue diagnosis and improving developer productivity.',
+        '',
         '✓ Diagnosed and resolved large-scale memory leaks, improving simulator stability and long-running reliability',
+        '',
         '✓ Improved simulator performance through optimization of critical execution paths',
+        '',
         '✓ Integrated AddressSanitizer (ASan) and UndefinedBehaviorSanitizer (UBSan) into the simulator regression workflow, enabling early detection of memory errors and undefined behavior.',
+        '',
         '✓ Migrated the simulation environment to a newer Ubuntu release, ensuring compatibility across the development infrastructure.',
+        '',
         '✓ Developed Python and Ansible automation to provision and configure Ubuntu machines for a fully reproducible development environment',
+        '',
         '✓ Containerized the simulator and its development environment using Docker, providing a reproducible and portable setup across development machines.',
+        '',
         '✓ Developed Python utilities to synchronize source code between UVM and COSIM repositories',
         '',
         BOLD + 'Tech Stack' + RESET,
@@ -213,6 +221,99 @@ var TerminalData = (function () {
     });
   });
 
+  var PROJECT_URLS = {
+    switchsim: 'https://switchsim.ashvingaonkar.com/',
+    auctioneer: 'https://github.com/Ashvin-G/Auctioneer',
+    virtualmouse: 'https://github.com/Ashvin-G/Virtual-Mouse',
+    sudokusolver: 'https://github.com/Ashvin-G/Sudoku_Solver',
+    blinker: 'https://github.com/Ashvin-G/Blinker',
+    fras: 'https://github.com/Ashvin-G/Face-Recognition-Based-Attendance-System'
+  };
+
+  var PROJECTS = [
+    {
+      title: 'SwitchSim: Network Switch Simulator',
+      stack: 'Python, FastAPI, React, xterm.js, @xyflow/react',
+      points: [
+        'Simulates L2 switching: MAC learning, flooding, forwarding, STP loop protection',
+        'Campaign mode (guided levels) and Playground mode (drag-and-drop multi-switch topologies)',
+        'Terminal-driven CLI via xterm.js, backed by a FastAPI domain model'
+      ]
+    },
+    {
+      title: 'Bookipedia: E-commerce for Books',
+      stack: 'Node.js, React, MongoDB, Kafka, Ansible, Docker, Grafana',
+      points: [
+        'Full-stack dev with CI/CD cutting deploy time from 35 to 10 minutes',
+        'Kafka-driven real-time inventory tracking and activity logging'
+      ]
+    },
+    {
+      title: 'CollabCode: Live Code Editing Platform',
+      stack: 'React, Node.js, Websockets, Docker',
+      points: [
+        'Real-time collaborative editor with auth, chat, and RBAC',
+        'MongoDB storage, in-editor commenting'
+      ]
+    },
+    {
+      title: 'Auctioneer: Multithreaded Auction & Reliable File Transfer',
+      stack: 'Python, Sockets, TCP, UDP, Multithreading',
+      points: [
+        'Multithreaded TCP auction server running sealed-bid auctions over raw sockets',
+        'Custom Stop-and-Wait reliable data transfer (RDT) protocol over UDP'
+      ]
+    },
+    {
+      title: 'Virtual Mouse: Hand Gesture Mouse Control',
+      stack: 'Python, OpenCV, MediaPipe, Numpy, Pynput',
+      points: [
+        'Camera-driven virtual mouse tracking 20 hand landmarks in real time',
+        'Gesture-to-action mapping for click, double-click, and scroll'
+      ]
+    },
+    {
+      title: 'Sudoku Solver: CNN-Based Image Recognition & Backtracking',
+      stack: 'Python, OpenCV, TensorFlow, Numpy, Matplotlib',
+      points: [
+        'Image pipeline isolating and splitting a Sudoku grid from a photo',
+        'CNN digit recognition combined with a backtracking solver'
+      ]
+    },
+    {
+      title: 'Blinker: Eye-Blink to Morse Code Communication',
+      stack: 'Python, OpenCV, dlib, Numpy',
+      points: [
+        'Detects 68 facial landmarks to track eye state and blink duration',
+        'Classifies blinks as Morse Code dots/dashes and decodes to text'
+      ]
+    },
+    {
+      title: 'Face Recognition Based Attendance System',
+      stack: 'Python, OpenCV, Haar Cascade, Numpy',
+      points: [
+        'End-to-end facial recognition pipeline for automated attendance',
+        'Three-stage workflow: dataset capture, model training, live detection'
+      ]
+    },
+    {
+      title: 'Secure File Transfer & MITM Attacks',
+      stack: 'Python, PyCryptodome, Sockets, AES-GCM, Diffie-Hellman',
+      points: [
+        'Encrypted file transfer over sockets using AES-256-GCM with PBKDF2-derived keys',
+        'MITM proxy performing separate DH exchanges to decrypt/re-encrypt traffic'
+      ]
+    },
+    {
+      title: 'Network Security Audit: NC State Infrastructure Recon',
+      stack: 'Python, Censys, Shodan, Plotly, Certificate Transparency',
+      points: [
+        'Passive network security audit identifying owned IPv4 CIDR blocks',
+        'Censys/Shodan host profiling and shadow IT discovery via certificate transparency'
+      ]
+    }
+  ];
+
   var MAN_PAGES = {
     about: {
       synopsis: 'about',
@@ -232,14 +333,14 @@ var TerminalData = (function () {
       examples: [
         'experience',
         'experience hpe',
-        'experience ncsu --verbose'
+        'experience hpe --verbose'
       ]
     },
     projects: {
       synopsis: 'projects [<name> --open]',
       description: 'Lists notable projects with tech stack and a short summary of each. Pass a project name with --open to open its live demo in a new tab.',
       options: [
-        '<name>     one of: switchsim',
+        '<name>     one of: switchsim, auctioneer, virtualmouse, sudokusolver, blinker, fras',
         '--open     open the live demo for <name> or GitHub project source code'
       ],
       examples: [
@@ -287,6 +388,8 @@ var TerminalData = (function () {
     RESET: RESET,
     EXPERIENCE: EXPERIENCE,
     ALIAS_TO_KEY: ALIAS_TO_KEY,
+    PROJECT_URLS: PROJECT_URLS,
+    PROJECTS: PROJECTS,
     MAN_PAGES: MAN_PAGES
   };
 })();
